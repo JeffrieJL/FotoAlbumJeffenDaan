@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlbumComponent } from './albumcomponent/album.component';
+import { AlbumComponent } from './album.component';
 
 @Component({
     selector: 'my-app',

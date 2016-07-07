@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'album',
-    templateUrl: './app/albumcomponent/album.html',
-    styleUrls: ['./app/albumcomponent/album.css']
+    templateUrl: './app/album.html',
+    styleUrls: ['./app/album.css']
 })
 
 export class AlbumComponent{
