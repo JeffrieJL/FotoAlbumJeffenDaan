@@ -17,20 +17,3 @@
   top: -3px;
   padding: 20px 30px; 
 }
-
-#spacefromtop {
-    position: absolute;
-    top: 80px;
-}
-
-@media (min-width: 768px) {
-  h1 {
-        color: blue; 
-    }
-}
-
-@media (min-width: 1100px) {
-  h1 {
-        color: green; 
-     }
-}
