@@ -1,11 +1,12 @@
 #spacefromtop {
     position: relative;
-    margin-top: 12%;
+    margin-top: 16%;
 }
 
 /*btn-xlarge is de album button, hoeft niet aangepast te worden vanwege bootstrap(grid system, columns)*/
 .btn-xlarge {
     padding: 1.5% 2%;
+    margin: 0.5%;
     font-size: 100%; 
     line-height: normal;
     -webkit-border-radius: 8px;
@@ -16,14 +17,14 @@
 @media (min-width: 768px) {
     #spacefromtop {
     position: relative;
-    margin-top: 10%;
+    margin-top: 16%;
     }
 }
 
 @media (min-width: 1200px) {
     #spacefromtop {
     position: relative;
-    margin-top: 6%;
+    margin-top: 10%;
     }
 
     .verticalLine, visible-lg, hidden-xs, hidden-sm, hidden-md {

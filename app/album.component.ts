@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { album } from './albums';
 
 @Component({
     selector: 'album',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class AlbumComponent{
-
+    albums = [
+        new album(1, "OOSTENRIJK 2012"),
+        new album(2, "WINTERSPORT 2015"),
+        new album(3, "AMERIKA 2016")
+    ];
+    
+    myAlbums = this.albums[0];
 }
