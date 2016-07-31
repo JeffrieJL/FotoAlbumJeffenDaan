@@ -1,18 +1,31 @@
-import { Component } from '@angular/core';
-import { album } from './albums';
+import { Component, OnInit } from '@angular/core';
+import { AlbumService } from './album.service';
+
 
 @Component({
     selector: 'album',
     templateUrl: './app/album.html',
-    styleUrls: ['./app/album.css']
+    styleUrls: ['./app/album.css'],
+    providers: [AlbumService]
 })
 
-export class AlbumComponent{
-    albums = [
-        new album(1, "OOSTENRIJK 2012"),
-        new album(2, "WINTERSPORT 2015"),
-        new album(3, "AMERIKA 2016")
-    ];
-    
-    myAlbums = this.albums[0];
+export class AlbumComponent implements OnInit{
+    constructor(private albumService: AlbumService){}
+
+    ngOnInit(){
+
+    }
+
+    oostenrijkAlbum(){
+        this.albumService.oostenrijkAlbum();
+    }
+
+    wintersportAlbum(){
+        this.albumService.wintersportAlbum();
+    }
+
+    amerikaAlbum(){
+        this.albumService.amerikaAlbum();
+    }
 }
+
