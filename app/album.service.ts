@@ -33,7 +33,7 @@ export class AlbumService{
          for (i; i <= 4; i++) {
             window.URL = window.URL;
             let xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://jeffjlstorage.blob.core.windows.net/wintersport2015/winter'+i+'.jpg', true);//deze album moet 'JPG' hebben ipv 'jpg', dus hoofdletters
+            xhr.open('GET', 'https://jeffjlstorage.blob.core.windows.net/wintersport2015/winter'+i+'.jpg', true);//deze album moet 'jpg' hebben ipv 'JPG', dus geen hoofdletters
             xhr.responseType = 'blob';
             xhr.onload = function(e){
                 if(this.status == 200){

@@ -8,7 +8,7 @@
     padding: 1.5% 2%;
     margin: 0.5%;
     margin-bottom: 2%;
-    font-size: 140%; 
+    font-size: 180%; 
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
@@ -24,6 +24,10 @@
     height: 100px;
 }
 
+.disableOpacity {
+    opacity: 0.5;
+}
+
 @media (min-width: 768px) {
     #spacefromtop {
     position: relative;
@@ -31,10 +35,17 @@
     }
 }
 
+@media (min-width: 900px){
+    #spacefromtop {
+    position: relative;
+    margin-top: 12%;
+    }
+}
+
 @media (min-width: 1200px) {
     #spacefromtop {
     position: relative;
-    margin-top: 10%;
+    margin-top: 8%;
     }
 
     .verticalLine, visible-lg, hidden-xs, hidden-sm, hidden-md {
