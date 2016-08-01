@@ -14,15 +14,6 @@
        -moz-border-radius: 8px;
             border-radius: 8px;
 }
-#albumPicOostenrijk {
-    width: 140px;
-    height: 100px;
-}
-
-#albumPicWintersport {
-    width: 140px;
-    height: 100px;
-}
 
 .disableOpacity {
     opacity: 0.5;
