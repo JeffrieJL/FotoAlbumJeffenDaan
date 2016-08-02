@@ -19,7 +19,7 @@ export class AlbumService{
                     };
                     img.src = window.URL.createObjectURL(blob);
                     let div = document.createElement('div');
-                    div.className = "col-xs-4 col-lg-2";
+                    div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(img);
                     document.getElementById('picaOost').appendChild(div);              
                 }
@@ -45,7 +45,7 @@ export class AlbumService{
                     };
                     img.src = window.URL.createObjectURL(blob);
                     let div = document.createElement('div');
-                    div.className = "col-xs-4 col-lg-2";
+                    div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(img);
                     document.getElementById('picaWinter').appendChild(div);              
                 }
@@ -72,7 +72,7 @@ export class AlbumService{
                     };
                     img.src = window.URL.createObjectURL(blob);
                     let div = document.createElement('div');
-                    div.className = "col-xs-4 col-lg-2";
+                    div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(img);
                     document.getElementById('picaUsa').appendChild(div);              
                 }

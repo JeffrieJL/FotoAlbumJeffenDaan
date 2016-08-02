@@ -6,7 +6,7 @@
                 <!--vanaf hier..........-->
                 <button class="btn-primary btn-xlarge btn-block" *ngIf="!isClickedOost" (click)="oostenrijkAlbum()">OOSTENRIJK 2011</button>
                 <button class="btn-primary btn-xlarge btn-block disableOpacity" *ngIf="disableIsHiddenOost" disabled>OOSTENRIJK 2011</button>
-                <button class="btn-danger btn-xlarge btn-block" *ngIf="sluitIsHiddenOost" (click)="sluitOostenrijkAlbum()">SLUIT: OOSTENRIJK 2011</button>
+                <button class="btn-primary btn-xlarge btn-block" *ngIf="sluitIsHiddenOost" (click)="sluitOostenrijkAlbum()"><b>SLUIT:</b> OOSTENRIJK 2011</button>
                 <div class="row">
                     <div class="col-xs-12 col-lg-12" id="picaOost" *ngIf="!removePicsOost">
                     </div>
@@ -14,14 +14,14 @@
                 <!--tot hier gebruiken voor nieuwe album-->
                 <button class="btn-primary btn-xlarge btn-block" *ngIf="!isClickedWinter" (click)="wintersportAlbum()">WINTERSPORT 2015</button>
                 <button class="btn-primary btn-xlarge btn-block disableOpacity" *ngIf="disableIsHiddenWinter" disabled>WINTERSPORT 2015</button>
-                <button class="btn-danger btn-xlarge btn-block" *ngIf="sluitIsHiddenWinter" (click)="sluitWinterAlbum()">SLUIT: WINTERSPORT 2015</button>
+                <button class="btn-primary btn-xlarge btn-block" *ngIf="sluitIsHiddenWinter" (click)="sluitWinterAlbum()"><b>SLUIT:</b> WINTERSPORT 2015</button>
                 <div class="row">
                     <div class="col-xs-12 col-lg-12" id="picaWinter"  *ngIf="!removePicsWinter">
                     </div>
                 </div>
                 <button class="btn-primary btn-xlarge btn-block" *ngIf="!isClickedUsa" (click)="amerikaAlbum()">AMERIKA 2016</button>
                 <button class="btn-primary btn-xlarge btn-block disableOpacity" *ngIf="disableIsHiddenUsa" disabled>AMERIKA 2016</button>
-                <button class="btn-danger btn-xlarge btn-block" *ngIf="sluitIsHiddenUsa" (click)="sluitAmerikaAlbum()">SLUIT: AMERIKA 2016</button>
+                <button class="btn-primary btn-xlarge btn-block" *ngIf="sluitIsHiddenUsa" (click)="sluitAmerikaAlbum()"><b>SLUIT:</b> AMERIKA 2016</button>
                 <div class="row">
                     <div class="col-xs-12 col-lg-12" id="picaUsa" *ngIf="!removePicsUsa">
                     </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-xs-1 col-lg-3 hidden-xs hidden-sm hidden-md">
                 <div class="verticalLine visible-lg hidden-xs hidden-sm hidden-md">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet excepturi, explicabo modi ducimus, commodi esse at non iusto consequatur incidunt quasi consectetur officiis quaerat cum voluptatum neque distinctio minima.</p>
+                    <sidebar></sidebar>
                 </div>
             </div>
         </div>

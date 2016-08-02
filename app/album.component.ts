@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlbumService } from './album.service';
+import { SidebarComponent } from './sidebar.component';
 
 
 @Component({
     selector: 'album',
     templateUrl: './app/album.html',
     styleUrls: ['./app/album.css'],
-    providers: [AlbumService]
+    providers: [AlbumService],
+    directives: [SidebarComponent]
 })
 
-export class AlbumComponent implements OnInit{
+export class AlbumComponent {
     constructor(private albumService: AlbumService){}
-
-    ngOnInit(){
-
-    }
 
     isClickedOost: boolean = false;
     isClickedWinter: boolean = false;

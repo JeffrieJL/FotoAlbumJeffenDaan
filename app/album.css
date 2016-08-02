@@ -3,12 +3,13 @@
     margin-top: 16%;
 }
 
-/*btn-xlarge is de album button, hoeft niet aangepast te worden vanwege bootstrap(grid system, columns)*/
+/*btn-xlarge is de album button*/
 .btn-xlarge {
     padding: 1.5% 2%;
     margin: 0.5%;
     margin-bottom: 2%;
-    font-size: 180%; 
+    height: 9%;
+    font-size: 140%; 
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
@@ -29,7 +30,7 @@
 @media (min-width: 900px){
     #spacefromtop {
     position: relative;
-    margin-top: 12%;
+    margin-top: 8%;
     }
 }
 
@@ -46,7 +47,7 @@
 }
 
 
-@media (min-width: 1800px) {
+@media (min-width: 1700px) {
     #spacefromtop {
     position: relative;
     margin-top: 4%;

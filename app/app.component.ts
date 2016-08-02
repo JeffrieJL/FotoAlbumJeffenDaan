@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlbumComponent } from './album.component';
 
 @Component({
@@ -8,6 +8,9 @@ import { AlbumComponent } from './album.component';
     directives: [AlbumComponent]
 })
 
-export class AppComponent{
+export class AppComponent implements OnInit{
+    ngOnInit(){
+        //mischien oninit gebruiken voor de authenticatie, maar dan in een andere component.
+    }
     
 }
