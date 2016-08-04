@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AlbumService } from './album.service';
 import { SidebarComponent } from './sidebar.component';
 
@@ -27,6 +27,15 @@ export class AlbumComponent {
     removePicsWinter: boolean = false;
     removePicsUsa: boolean = false;
 
+    @ViewChild('oost')
+    oostChild: SidebarComponent;
+
+    @ViewChild('winter')
+    winterChild: SidebarComponent;
+
+    @ViewChild('amerika')
+    amerikaChild: SidebarComponent;
+
     oostenrijkAlbum(){
         this.albumService.oostenrijkAlbum();
         this.isClickedOost = true; //true wordt false in html
@@ -36,6 +45,8 @@ export class AlbumComponent {
         this.disableIsHiddenWinter = true;
         this.disableIsHiddenUsa = true;
         this.removePicsOost = false; //false wordt true in html
+
+        this.oostChild.openSidebarOostenrijk();
     }
 
     wintersportAlbum(){
@@ -47,6 +58,8 @@ export class AlbumComponent {
         this.disableIsHiddenOost = true;
         this.disableIsHiddenUsa = true;
         this.removePicsWinter = false; //false wordt true in html
+
+        this.winterChild.openSidebarWintersport();
     }
 
     amerikaAlbum(){
@@ -58,6 +71,8 @@ export class AlbumComponent {
         this.disableIsHiddenOost = true;
         this.disableIsHiddenWinter = true;
         this.removePicsUsa = false; //false wordt true in html
+
+        this.amerikaChild.openSidebarAmerika();
     }
 
      sluitOostenrijkAlbum(){
@@ -68,6 +83,8 @@ export class AlbumComponent {
         this.disableIsHiddenUsa = false;
         this.isClickedWinter = false; //false wordt true in html
         this.isClickedUsa = false; //false wordt true in html
+
+        this.oostChild.sluitSidebarOostenrijk();
     }
 
     sluitWinterAlbum(){
@@ -78,6 +95,8 @@ export class AlbumComponent {
         this.disableIsHiddenUsa = false;
         this.isClickedOost = false; //false wordt true in html
         this.isClickedUsa = false; //false wordt true in html
+
+        this.winterChild.sluitSidebarWintersport();
     }
     
     sluitAmerikaAlbum(){
@@ -88,6 +107,8 @@ export class AlbumComponent {
         this.disableIsHiddenWinter = false;
         this.isClickedOost = false; //false wordt true in html
         this.isClickedWinter = false; //false wordt true in html
+
+        this.amerikaChild.sluitSidebarAmerika();
     }
 }
 
