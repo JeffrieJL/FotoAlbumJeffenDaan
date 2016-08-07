@@ -14,11 +14,17 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
-                    img.onclick = test; //voert de functie test uit.
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let insertModalImage = function(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }
+                    img.onclick = insertModalImage; //Voert de functie insertModalImage uit
                     let a = document.createElement('a');
                     a.className = 'thumbnail';
                     a.appendChild(img);
@@ -26,13 +32,6 @@ export class AlbumService{
                     div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(a);
                     document.getElementById('picaOost').appendChild(div);
-
-                    function  test(){
-                        let modal = document.getElementById("myModal");
-                        let modalImg = document.getElementById("img01");
-                        modal.style.display ="block";
-                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
-                    }
                 }
             }
             xhr.send();
@@ -51,11 +50,17 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
-                    img.onclick = test;
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let insertModalImage = function(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }
+                    img.onclick = insertModalImage;
                     let a = document.createElement('a');
                     a.className = 'thumbnail';
                     a.appendChild(img);
@@ -63,13 +68,7 @@ export class AlbumService{
                     div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(a);
                     document.getElementById('picaWinter').appendChild(div);   
-
-                    function  test(){
-                        let modal = document.getElementById("myModal");
-                        let modalImg = document.getElementById("img01");
-                        modal.style.display ="block";
-                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
-                    }           
+           
                 }
             }
             xhr.send();
@@ -77,7 +76,6 @@ export class AlbumService{
     }
 
     public amerikaAlbum(){   
-   
         let i: number = 1;
         for (i; i <= 4; i++) {
             window.URL = window.URL;
@@ -89,25 +87,24 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
-                    img.onclick = test;
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let insertModalImage = function(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }
+                    img.onclick = insertModalImage;
                     let a = document.createElement('a');
                     a.className = 'thumbnail';
                     a.appendChild(img);
                     let div = document.createElement('div');
                     div.className = "col-xs-4 col-md-3 col-lg-2";
                     div.appendChild(a);
-                    document.getElementById('picaUsa').appendChild(div); 
-
-                    function  test(){
-                        let modal = document.getElementById("myModal");
-                        let modalImg = document.getElementById("img01");
-                        modal.style.display ="block";
-                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
-                    }                    
+                    document.getElementById('picaUsa').appendChild(div);                    
                 }
             }
             xhr.send();
