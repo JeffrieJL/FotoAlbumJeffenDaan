@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { AlbumService } from './album.service';
 import { SidebarComponent } from './sidebar.component';
+import { ModalComponent } from './modal.component';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { SidebarComponent } from './sidebar.component';
     templateUrl: './app/album.html',
     styleUrls: ['./app/album.css'],
     providers: [AlbumService],
-    directives: [SidebarComponent]
+    directives: [SidebarComponent, ModalComponent]
 })
 
 export class AlbumComponent {

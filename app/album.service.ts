@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class AlbumService{
     public oostenrijkAlbum(){
         let i: number = 1;
-         for (i; i <= 4; i++) {
+        for (i; i <= 4; i++) {
             window.URL = window.URL;
             let xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://jeffjlstorage.blob.core.windows.net/oostenrijk2012/oost'+i+'.JPG', true);
@@ -14,14 +14,25 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
+                    img.onclick = test; //voert de functie test uit.
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let a = document.createElement('a');
+                    a.className = 'thumbnail';
+                    a.appendChild(img);
                     let div = document.createElement('div');
                     div.className = "col-xs-4 col-md-3 col-lg-2";
-                    div.appendChild(img);
-                    document.getElementById('picaOost').appendChild(div);              
+                    div.appendChild(a);
+                    document.getElementById('picaOost').appendChild(div);
+
+                    function  test(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }
                 }
             }
             xhr.send();
@@ -30,7 +41,7 @@ export class AlbumService{
 
     public wintersportAlbum(){
         let i: number = 1;
-         for (i; i <= 4; i++) {
+        for (i; i <= 4; i++) {
             window.URL = window.URL;
             let xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://jeffjlstorage.blob.core.windows.net/wintersport2015/winter'+i+'.jpg', true);//deze album moet 'jpg' hebben ipv 'JPG', dus geen hoofdletters
@@ -40,14 +51,25 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
+                    img.onclick = test;
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let a = document.createElement('a');
+                    a.className = 'thumbnail';
+                    a.appendChild(img);
                     let div = document.createElement('div');
                     div.className = "col-xs-4 col-md-3 col-lg-2";
-                    div.appendChild(img);
-                    document.getElementById('picaWinter').appendChild(div);              
+                    div.appendChild(a);
+                    document.getElementById('picaWinter').appendChild(div);   
+
+                    function  test(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }           
                 }
             }
             xhr.send();
@@ -67,14 +89,25 @@ export class AlbumService{
                     let blob = this.response;
                     let img = document.createElement('img');
                     img.className = "picClass";
+                    img.onclick = test;
                     img.onload = function(e){
                         window.URL.revokeObjectURL(img.src);
                     };
                     img.src = window.URL.createObjectURL(blob);
+                    let a = document.createElement('a');
+                    a.className = 'thumbnail';
+                    a.appendChild(img);
                     let div = document.createElement('div');
                     div.className = "col-xs-4 col-md-3 col-lg-2";
-                    div.appendChild(img);
-                    document.getElementById('picaUsa').appendChild(div);              
+                    div.appendChild(a);
+                    document.getElementById('picaUsa').appendChild(div); 
+
+                    function  test(){
+                        let modal = document.getElementById("myModal");
+                        let modalImg = document.getElementById("img01");
+                        modal.style.display ="block";
+                        modalImg.setAttribute("src", window.URL.createObjectURL(blob));
+                    }                    
                 }
             }
             xhr.send();
