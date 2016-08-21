@@ -24,7 +24,7 @@ footer {
 }
 
 /* iphone landscape*/
-@media (min-width: 320px) and (max-width: 568) and (orientation: landscape) {
+@media (orientation: landscape) {
     #landscapeMessage {
       display: block;
     }
@@ -35,7 +35,7 @@ footer {
 }
 
 /* tablet landscape*/
-@media (min-width: 768px) and (max-width: 1024) and (orientation: landscape) {
+@media (orientation: landscape) {
     #landscapeMessage {
       display: block;
     }
